@@ -34,3 +34,15 @@ statisticsString("Мир вам, братья и сёстры в 2023г.");
 // Цифр в строке - 4
 // Символов в строке - 2
 // Пробелов в строке - 6
+
+/*
+2. Написать функцию возведения числа в степень.
+*/
+function powerNumber(number, power) {
+   if (power != 1) {
+      return number * powerNumber(number, power - 1);
+   } else {
+      return number;
+   }
+}
+// alert(powerNumber(3, 6)); /*729*/
