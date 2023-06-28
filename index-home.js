@@ -46,3 +46,18 @@ function powerNumber(number, power) {
    }
 }
 // alert(powerNumber(3, 6)); /*729*/
+
+/*
+3. Написать функцию поиска наибольшего общего делителя.
+*/
+function commonDivisor(number1, number2) {
+   if (number2 > number1) {
+      return commonDivisor(number2, number1);
+   }
+   if (!number2) {
+      return number1;
+   }
+   return commonDivisor(number2, number1 % number2);
+}
+// alert(commonDivisor(99, 44)); /*11*/
+// alert(commonDivisor(18, 99)); /*9*/
